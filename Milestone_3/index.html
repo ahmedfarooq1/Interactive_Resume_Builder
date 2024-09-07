@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Form Section -->
+        <div class="form-container">
+            <h2>Build Your Resume</h2>
+            <form id="resumeForm">
+                <!-- Personal Information -->
+                <h3>Personal Information</h3>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" required>
+                <br>
+
+                <!-- Education -->
+                <h3>Education</h3>
+                <label for="education">Education:</label>
+                <input type="text" id="education" name="education" required>
+                <br>
+
+                <!-- Work Experience -->
+                <h3>Work Experience</h3>
+                <label for="work-experience">Work Experience:</label>
+                <textarea id="work-experience" name="work-experience" required></textarea>
+                <br>
+
+                <!-- Skills -->
+                <h3>Skills</h3>
+                <label for="skills">Skills:</label>
+                <input type="text" id="skills" name="skills" required>
+                <br>
+
+                <button type="submit">Generate Resume</button>
+            </form>
+        </div>
+
+        <!-- Resume Section -->
+        <div id="resume">
+            <div class="header">
+                <h1 id="name-display">Your Name</h1>
+                <p id="email-display">Email: your.email@example.com</p>
+                <p id="contact-display">Contact: 123-456-7890</p>
+            </div>
+            <hr>
+
+            <div class="section">
+                <h2 class="toggle-section">Education &#9662;</h2>
+                <div class="section-content" id="education-display">Your education details go here.</div>
+            </div>
+            <hr>
+
+            <div class="section">
+                <h2 class="toggle-section">Work Experience &#9662;</h2>
+                <div class="section-content" id="work-experience-display">Your work experience details go here.</div>
+            </div>
+            <hr>
+
+            <div class="section">
+                <h2 class="toggle-section">Skills &#9662;</h2>
+                <div class="section-content" id="skills-display">Your skills go here.</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
